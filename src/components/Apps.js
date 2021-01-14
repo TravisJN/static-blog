@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { Link, Switch, Route, useRouteMatch, Redirect, useLocation } from 'react-router-dom';
 import AppStoreImage from '../assets/appstore.svg';
@@ -14,7 +14,11 @@ function Apps() {
   const { path, url } = useRouteMatch();
   const { pathname } = useLocation();
   const startingPath = pathname.replace('/apps/', '');
-  const [currentApp, setCurrentApp] = useState(startingPath === '/apps' ? 'ins-and-outs' : startingPath);  // hack to fix initial underline
+  const [currentApp, setCurrentApp] = useState(startingPath);
+
+  useEffect(() => {
+    setCurrentApp(startingPath === '/apps' ? 'ins-and-outs' : startingPath); // hack to fix initial underline
+  }, startingPath);
 
   return (
     <Fade>
