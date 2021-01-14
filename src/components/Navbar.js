@@ -16,7 +16,7 @@ function Navbar() {
       </Link>
       <Link
         to="/apps"
-        className={`navbar-text ${currentView === '/apps' ? 'underline' : ''}`}
+        className={`navbar-text ${currentView.includes('/apps') ? 'underline' : ''}`}
         onClick={() => setView('/apps')}
       >
         Apps
