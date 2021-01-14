@@ -7,8 +7,9 @@ import InsAndOutsHomeImage from '../assets/InsAndOuts/Home.png';
 import InsAndOutsHistoryImage from '../assets/InsAndOuts/History.png';
 import InsAndOutsFoodEntryImage from '../assets/InsAndOuts/FoodEntry.png';
 import MacroRecipesHomeImage from '../assets/MacroRecipes/Home.png';
-import MacroRecipesListImage from '../assets/MacroRecipes/List.png';
-import MacroRecipesRecipeImage from '../assets/MacroRecipes/Recipe.png';
+import MacroRecipesListImage from '../assets/MacroRecipes/Results.png';
+import MacroRecipesRecipeImageOne from '../assets/MacroRecipes/Recipe1.png';
+import MacroRecipesRecipeImageTwo from '../assets/MacroRecipes/Recipe2.png';
 
 function Apps() {
   const { path, url } = useRouteMatch();
@@ -103,7 +104,8 @@ function MacroRecipes() {
         <div className="app-picture-container">
           <img src={MacroRecipesHomeImage} width={170} height={330} alt="Macro Recipes app home page" />
           <img src={MacroRecipesListImage} width={170} height={330} alt="Macro Recipes app recipe list page" />
-          <img src={MacroRecipesRecipeImage} width={170} height={330} alt="Macro Recipes app recipe page" />
+          <img src={MacroRecipesRecipeImageOne} width={170} height={330} alt="Macro Recipes app recipe page" />
+          <img src={MacroRecipesRecipeImageTwo} width={170} height={330} alt="Macro Recipes app recipe page" />
         </div>
 
         <PrivacyPolicy />
